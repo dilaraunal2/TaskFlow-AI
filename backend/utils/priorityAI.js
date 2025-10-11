@@ -1,7 +1,7 @@
 function predictPriority(title, description) {
-  const highWords = ["acil", "hemen", "kritik", "önemli", "urgent","!","unutma","randevu"];
-  const mediumWords = ["yakında", "hafta", "plan", "görev", "bitir", "kontrol", "toplantı"];
-  const lowWords = ["ilerleyen", "sonra", "istirahat", "gün", "opsiyonel"];
+  const highWords = ["acil", "hemen", "kritik", "önemli", "urgent","!","unutma","randevu","critical"];
+  const mediumWords = ["yakında", "hafta", "plan", "görev", "bitir", "kontrol", "toplantı","soon","today","important"];
+  const lowWords = ["ilerleyen", "sonra", "istirahat", "gün", "opsiyonel","later","someday","optional"];
 
   // Başlık ve açıklamayı küçük harfe çevir ve kelimelere ayır
   const allWords = (
