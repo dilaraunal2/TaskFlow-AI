@@ -1,0 +1,109 @@
+/* Task Listesi */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tek görev */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  background-color: #fefefe;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.task-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Öncelik renkleri */
+.task-item.high { border-left: 5px solid #ff6b6b; }
+.task-item.medium { border-left: 5px solid #ffd166; }
+.task-item.low { border-left: 5px solid #6bcB77; }
+
+/* Tamamlanan görevler */
+.task-item.completed {
+  background-color: #e0f7fa;
+}
+
+.task-item.completed .task-info {
+  text-decoration: line-through;
+  opacity: 0.6;
+  transition: all 0.4s;
+}
+
+/* Görev bilgisi */
+.task-info {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 1rem;
+  color: #34495e;
+}
+
+/* Öncelik yazısı */
+.priority-text {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* Tik ve sil butonları */
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Tik butonu */
+.check-btn {
+  background-color: #e0f0f7;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.check-btn.checked {
+  background-color: #6bcB77;
+  color: white;
+  transform: scale(1.2);
+}
+
+/* Sil butonu */
+.delete-btn {
+  background-color: #ff6b6b;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.check-btn:hover, .delete-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .app-card { padding: 25px 20px; }
+  h1 { font-size: 2.2rem; }
+  .add-task-form input, .add-task-form textarea { font-size: 0.95rem; }
+}

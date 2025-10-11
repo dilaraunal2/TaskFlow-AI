@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* 🔹 Genel App container */
+.app-container {
   min-height: 100vh;
+  padding: 20px;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #5f29cc, #7a45ff); /* Getir mor degrade */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* 🔹 Ana kart (içerik kutusu) */
+.app-card {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app-card:hover {
+  transform: translateY(-4px);
+}
+
+/* 🔹 Başlık */
+.app-title {
+  color: #5f29cc; /* Getir moru */
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* 🔹 Alt başlık */
+.subtitle {
+  color: #444;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+/* 🔹 AddTaskForm stilleri */
+.add-task-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  background: #faf9ff; /* Açık mor arka plan */
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(95, 41, 204, 0.2);
+  transition: all 0.3s ease;
+}
+
+.add-task-form:hover {
+  box-shadow: 0 10px 30px rgba(95, 41, 204, 0.3);
+}
+
+.add-task-form input,
+.add-task-form textarea {
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.add-task-form input:focus,
+.add-task-form textarea:focus {
+  border-color: #ffcc00; /* Getir sarısı */
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
+  outline: none;
+}
+
+/* 🔹 Butonlar */
+.add-task-form button {
+  padding: 12px;
+  margin-top: 12px;
+  background-color: #ffcc00; /* Sarı */
+  border: none;
+  border-radius: 10px;
+  color: #5f29cc;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-task-form button:hover {
+  background-color: #ffdb4d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 204, 0, 0.4);
+}
+
+/* 🔹 Responsive */
+@media (max-width: 650px) {
+  .app-card {
+    padding: 25px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .add-task-form {
+    padding: 18px;
+  }
+
+  .app-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
   }
 }
